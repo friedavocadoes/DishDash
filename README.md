@@ -1,9 +1,9 @@
 # Setting Up & Opening
 #### Setting up the project includes x main stages
-## Cloning the repo
+## Cloning the Repository
 1. Make sure [XAMPP](https://www.apachefriends.org/) is installed and start the `Apache Server` and `MySQL Server`.
 2. Go to `C:\xampp\htdocs` and open a Terminal window in the directory (`Alt + D` on the directory, type `cmd` and press enter).
-4. Clone the repository to that directory:
+3. Clone the repository to that directory:
    
    ```
    git clone "https://github.com/friedavocadoes/DishDash"
@@ -25,4 +25,6 @@
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
    );
    ```
-7. Once the Database and Tableis created, open http://localhost/project/index.php on a browser.
+
+## Opening the Website
+Once the Database and Tableis created, open http://localhost/project/index.php on a browser.
