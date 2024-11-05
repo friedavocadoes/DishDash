@@ -19,12 +19,12 @@
         <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-12">
             <!-- Team Members -->
             <div class="text-center">
-                <img src="gautham.jpg" alt="Gautham" class="w-40 h-40 rounded-full mx-auto mb-4">
+                <img src="assets/gautham.jpg" alt="Gautham" class="w-40 h-40 rounded-full mx-auto mb-4">
                 <h2 class="text-2xl font-semibold">Gautham</h2>
                 <p class="text-gray-600">Co-founder & Developer</p>
             </div>
             <div class="text-center">
-                <img src="palak.jpg" alt="Palak" class="w-40 h-40 rounded-full mx-auto mb-4">
+                <img src="assets/palak.jpg" alt="Palak" class="w-40 h-40 rounded-full mx-auto mb-4">
                 <h2 class="text-2xl font-semibold">Palak</h2>
                 <p class="text-gray-600">Co-founder & Designer</p>
             </div>
