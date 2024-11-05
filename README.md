@@ -5,7 +5,7 @@
 2. Go to `C:\xampp\htdocs` and open a Terminal window in the directory (`Alt + D` on the directory, type `cmd` and press enter).
 3. Clone the repository to that directory:
    
-   ```bash
+   ```git
    git clone "https://github.com/friedavocadoes/DishDash"
    ```
 
