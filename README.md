@@ -1,5 +1,5 @@
 # Setting Up & Opening
-#### Setting up the project includes x main stages
+#### Setting up the project includes 3 main stages
 ## Cloning the Repository
 1. Make sure [XAMPP](https://www.apachefriends.org/) is installed and start the `Apache Server` and `MySQL Server`.
 2. Go to `C:\xampp\htdocs` and open a Terminal window in the directory (`Alt + D` on the directory, type `cmd` and press enter).
@@ -27,4 +27,4 @@
    ```
 
 ## Opening the Website
-Once the Database and Tableis created, open http://localhost/project/index.php on a browser.
+#### Once the Database and Table is created, open http://localhost/project/index.php on a browser.
