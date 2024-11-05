@@ -5,4 +5,4 @@
    ```
    git clone "https://github.com/friedavocadoes/DishDash"
    ```
-4. Open `http://localhost/project/index.php` on a browser.
+4. Open http://localhost/project/index.php on a browser.
