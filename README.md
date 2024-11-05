@@ -14,6 +14,7 @@
 3. Create a Database with the name `dishdash`.
 4. Click on `SQL`.
 5. Copy the following SQL Query and click `Go`:
+   
    ```sql
    CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -23,4 +24,4 @@
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
    );
    ```
-6. Once the Database and Tableis created, open http://localhost/project/index.php on a browser.
+7. Once the Database and Tableis created, open http://localhost/project/index.php on a browser.
