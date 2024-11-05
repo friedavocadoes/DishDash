@@ -1,6 +1,13 @@
 <?php
 session_start();
-require 'config.php'; // Connect to the database
+require 'config.php';
+
+if (isset($_SESSION['username'])) {
+    header("Location: dashboard.php");
+    exit();
+}
+
+$err = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
@@ -14,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        echo "Username or email already exists.";
+        $err = "Username or email already exists.";
     } else {
         // Hash the password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -25,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['username'] = $username;
             header("Location: index.php"); // Redirect to homepage
         } else {
-            echo "Registration failed.";
+            $err = "Registration failed.";
         }
     }
 }
@@ -53,7 +60,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="email" name="email" placeholder="Email" class="w-full p-2 mb-4 border border-gray-300 rounded">
             <input type="password" name="password" placeholder="Password"
                 class="w-full p-2 mb-4 border border-gray-300 rounded">
+            <span class="mx-auto text-red-600 mb-4"><?php echo $err ?></span>
             <button type="submit" class="w-full bg-green-600 text-white py-2 rounded">Register</button>
+
             <span class="mt-2 ml-1"><a href="login.php" class="text-blue-600 hover:text-blue-400">Log In</a>
                 instead?</span>
         </form>

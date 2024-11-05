@@ -2,6 +2,13 @@
 session_start();
 require 'config.php'; // Connect to the database
 
+if (isset($_SESSION['username'])) {
+    header("Location: dashboard.php");
+    exit();
+}
+
+$err = "";
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -16,12 +23,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (password_verify($password, $user['password'])) {
             $_SESSION['username'] = $username;
-            header("Location: index.php"); // Redirect to homepage
+            header("Location: dashboard.php"); // Redirect to homepage
         } else {
-            echo "Invalid password.";
+            $err = "Invalid password.";
         }
     } else {
-        echo "User does not exist.";
+        $err = "User does not exist.";
     }
 }
 ?>
@@ -46,6 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 class="w-full p-2 mb-4 border border-gray-300 rounded">
             <input type="password" name="password" placeholder="Password"
                 class="w-full p-2 mb-4 border border-gray-300 rounded">
+            <span class="mx-auto text-red-600 mb-4"><?php echo $err ?></span>
             <button type="submit" class="w-full bg-green-600 text-white py-2 rounded">Login</button>
             <span class="mt-2 ml-1"><a href="register.php" class="text-blue-600 hover:text-blue-400">SignUp</a>
                 instead?</span>
