@@ -14,7 +14,7 @@
 3. Create a Database with the name `dishdash`.
 4. Click on `SQL`.
 5. Copy the following SQL Query and click `Go`:
-   ```
+   ```sql
    CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
