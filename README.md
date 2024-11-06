@@ -1,11 +1,5 @@
 # Setting Up & Opening
 #### Setting up the project includes 3 main stages
-> [!IMPORTANT]
-> This project requires atleast `PHP v8.1.0`. Check your php version using `php -v` in any terminal window.
-> Go to [XAMPP downloads](https://www.apachefriends.org/download.html) to get the latest stable version.
-
->[!WARNING]
-> Backup your `htdocs` folder if upgrading XAMPP.
 
 ## Cloning the Repository
 1. Make sure [XAMPP](https://www.apachefriends.org/) is installed and start the `Apache Server` and `MySQL Server`.
@@ -31,22 +25,6 @@
     email VARCHAR(100) NOT NULL UNIQUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
    );
-   ```
-
-## Installing a PHP package manager (for Gemini API integration support)
-1. In your project's terminal, run the following lines of code to install `Composer`:
-   
-   ```Batchfile
-   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-   php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-   php composer-setup.php
-   php -r "unlink('composer-setup.php');"
-   ```
-
-2. Install Gemini using Composer:
-
-   ```BatchFile
-   php composer.phar require google-gemini-php/client
    ```
 
 
