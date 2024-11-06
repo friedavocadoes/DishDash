@@ -43,6 +43,13 @@
    php -r "unlink('composer-setup.php');"
    ```
 
+2. Install Gemini using Composer:
+
+   ```BatchFile
+   php composer.phar require google-gemini-php/client
+   ```
+
+
 
 ## Opening the Website
 #### Once the Database and Table is created, open http://localhost/project/index.php on a browser.
