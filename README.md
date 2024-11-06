@@ -41,4 +41,4 @@
 > You can alternatively just edit the `$apiKey` variable in the `fetch_data.php` file.
    
 ## Opening the Website
-#### Once the Database and Table is created, open http://localhost/project/index.php on a browser.
+#### Once the Database and Table is created, open http://localhost/DishDash/index.php on a browser.
