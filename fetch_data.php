@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // The alternative method includes replacing the below line with your api key in quotes.
         // $apiKey = getenv("GEM_API_KEY");
-
         $apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
 
         $message = "give me a recipe to make $name as a html webpage element.if $name is not a food item, or not something that has a recipe presay, return an appropriate error. the response should NOT be enclosed in a html code block (i.e. DO NOT use ```html anywhere in the code). use tailwind css to design the element. Note that it is to be included in an already existing html page, so format accordingly, do not use any background colors";
