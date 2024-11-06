@@ -27,7 +27,14 @@
    );
    ```
 
-
-
+## Adding Gemini API to environment variables
+####  This project uses Gemini to pull recipes which requires Gemini API to be set in your environment variables.
+1. Get an API key from [Gemini API Docs](https://aistudio.google.com/app/apikey).
+2. Set the API key as `GEM_API_KEY` in the environment variables.
+   Open Terminal as Admin and enter the following (replace the `xxxx` with your Gemini API Key):
+   ```bash
+   setx GEM_API_KEY "xxxx" /M
+   ```
+   
 ## Opening the Website
 #### Once the Database and Table is created, open http://localhost/project/index.php on a browser.
