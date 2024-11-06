@@ -1,7 +1,7 @@
 # Setting Up & Opening
 #### Setting up the project includes 3 main stages
 > [!IMPORTANT]
-> This project requires atleast `php v8.1.0`. Check your php version using `php -v` in any terminal window.
+> This project requires atleast `PHP v8.1.0`. Check your php version using `php -v` in any terminal window.
 > Go to [XAMPP downloads](https://www.apachefriends.org/download.html) to get the latest stable version.
 
 ## Cloning the Repository
