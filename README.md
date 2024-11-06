@@ -36,9 +36,9 @@
    ```bash
    setx GEM_API_KEY "xxxx" /M
    ```
-
+3. Restart your computer for the environment variable changes to be reflected.
 > [!TIP]
-> You can alternatively just edit the 
+> You can alternatively just edit the `$apiKey` variable in the `fetch_data.php` file.
    
 ## Opening the Website
 #### Once the Database and Table is created, open http://localhost/project/index.php on a browser.
