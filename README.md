@@ -4,6 +4,9 @@
 > This project requires atleast `PHP v8.1.0`. Check your php version using `php -v` in any terminal window.
 > Go to [XAMPP downloads](https://www.apachefriends.org/download.html) to get the latest stable version.
 
+>[!WARNING]
+> Backup your `htdocs` folder if upgrading XAMPP.
+
 ## Cloning the Repository
 1. Make sure [XAMPP](https://www.apachefriends.org/) is installed and start the `Apache Server` and `MySQL Server`.
 2. Go to `C:\xampp\htdocs` and open a Terminal window in the directory (`Alt + D` on the directory, type `cmd` and press enter).
