@@ -19,7 +19,7 @@
         <h1 class="text-4xl font-bold text-green-600 mb-4">Welcome to Your Personalized Meal Planner</h1>
         <p class="text-lg text-gray-600 mb-8">Get custom meal plans tailored to your preferences and dietary needs.
             Start planning healthy and delicious meals today!</p>
-        <a href="login.php" class="bg-green-600 text-white px-6 py-3 rounded-md shadow hover:bg-green-700">Get
+        <a href="display.php" class="bg-green-600 text-white px-6 py-3 rounded-md shadow hover:bg-green-700">Get
             Started</a>
     </section>
 
