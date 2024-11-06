@@ -36,6 +36,9 @@
    ```bash
    setx GEM_API_KEY "xxxx" /M
    ```
+
+> [!TIP]
+> You can alternatively just edit the 
    
 ## Opening the Website
 #### Once the Database and Table is created, open http://localhost/project/index.php on a browser.
