@@ -1,5 +1,6 @@
 # Setting Up & Opening
-#### Setting up the project includes 3 main stages
+#### Setting up the project includes 3 main stages:
+1. [here](#Cloning-the-Repository)
 
 ## Cloning the Repository
 1. Make sure [XAMPP](https://www.apachefriends.org/) is installed and start the `Apache Server` and `MySQL Server`.
