@@ -1,4 +1,4 @@
-# Setting Up & Opening
+# Setting Up & Opening DishDash
 #### Setting up the project includes 3 main stages:
 1. [Cloning the Repository](#Cloning-the-Repository).
 2. [Creating the Database and Table](#Creating-the-Database-and-Table).
