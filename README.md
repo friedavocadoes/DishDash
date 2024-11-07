@@ -1,6 +1,9 @@
 # Setting Up & Opening
 #### Setting up the project includes 3 main stages:
-1. [here](#Cloning-the-Repository)
+1. [Cloning the Repository](#Cloning-the-Repository).
+2. [Creating the Database and Table](#Creating-the-Database-and-Table).
+3. [Adding Gemini API to environment variables](#Adding-Gemini-API-to-environment-variables).
+4. Finally [Opening the Website](#Opening-the-Website).
 
 ## Cloning the Repository
 1. Make sure [XAMPP](https://www.apachefriends.org/) is installed and start the `Apache Server` and `MySQL Server`.
