@@ -28,7 +28,9 @@ if (session_status() === PHP_SESSION_NONE) {
                     <!-- Dropdown content -->
                     <div
                         class="absolute right-0 hidden group-hover:block bg-white border border-gray-200 rounded shadow-md">
+                        <a href="dashboard.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Dashboard</a>
                         <a href="logout.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+
                     </div>
 
 

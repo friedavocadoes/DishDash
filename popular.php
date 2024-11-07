@@ -10,14 +10,14 @@
 
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Navbar -->
+
     <?php include 'navbar.php'; ?>
 
-    <!-- Popular Plans Section -->
+
     <section class="container mx-auto px-40 py-20">
         <h1 class="text-4xl font-bold text-green-600 text-center mb-16">Popular Meal Plans</h1>
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <!-- Meal Plan Card 1 -->
+
             <div class="bg-white rounded-lg shadow-md p-6">
                 <h2 class="text-2xl font-semibold text-green-600 mb-4">Mediterranean Delight</h2>
                 <p class="text-gray-700">A balanced meal plan inspired by the flavors of the Mediterranean. Includes
@@ -29,7 +29,7 @@
                 </ul>
             </div>
 
-            <!-- Meal Plan Card 2 -->
+
             <div class="bg-white rounded-lg shadow-md p-6">
                 <h2 class="text-2xl font-semibold text-green-600 mb-4">Vegan Power</h2>
                 <p class="text-gray-700">A plant-based meal plan rich in fiber, vitamins, and plant proteins to keep you
@@ -41,7 +41,7 @@
                 </ul>
             </div>
 
-            <!-- Meal Plan Card 3 -->
+
             <div class="bg-white rounded-lg shadow-md p-6">
                 <h2 class="text-2xl font-semibold text-green-600 mb-4">High-Protein Fitness Plan</h2>
                 <p class="text-gray-700">Designed for those looking to build muscle and stay lean. Includes high-protein
@@ -55,7 +55,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+
     <?php include 'footer.php'; ?>
 
 </body>
