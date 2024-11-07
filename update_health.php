@@ -2,20 +2,27 @@
 session_start();
 include 'config.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['username'])) {
-    $username = $_SESSION['username'];
-    $weight = $_POST['weight'];
-    $height = $_POST['height'];
-    $other_health_details = $_POST['other_health_details'];
-
-    $sql = "UPDATE users SET weight = ?, height = ?, other_health_details = ? WHERE username = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ddss", $weight, $height, $other_health_details, $username);
-
-    if ($stmt->execute()) {
-        header("Location: dashboard.php?success=1");
-    } else {
-        header("Location: dashboard.php?error=1");
-    }
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
 }
-?>
+
+$username = $_SESSION['username'];
+
+$weight = $_POST['weight'] ?? null;
+$height = $_POST['height'] ?? null;
+$age = $_POST['age'] ?? null;
+$gender = $_POST['gender'] ?? null;
+$activity_level = $_POST['activity_level'] ?? null;
+
+$sql = "UPDATE users SET weight = ?, height = ?, age = ?, gender = ?, activity_level = ? WHERE username = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ddssss", $weight, $height, $age, $gender, $activity_level, $username);
+
+if (!$stmt->execute()) {
+    echo "Error updating details: " . $conn->error;
+} else {
+    header("Location: dashboard.php");
+}
+$stmt->close();
+$conn->close();

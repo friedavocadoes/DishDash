@@ -10,6 +10,7 @@ if (!isset($_SESSION['username'])) {
 $username = $_SESSION['username'];
 
 $sql = "SELECT username, email, weight, height, other_health_details FROM users WHERE username = ?";
+$sql = "SELECT username, email, weight, height, age, gender, activity_level FROM users WHERE username = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $username);
 $stmt->execute();
@@ -50,6 +51,23 @@ $user = $stmt->get_result()->fetch_assoc();
 
             <form action="update_health.php" method="POST">
                 <div class="mb-4">
+                    <label for="age" class="block text-gray-700 font-semibold">Age:</label>
+                    <input type="number" id="age" name="age" min="0"
+                        value="<?php echo htmlspecialchars($user['age'] ?? ''); ?>"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded">
+                </div>
+
+                <!-- Gender Dropdown -->
+                <div class="mb-4">
+                    <label for="gender" class="block text-gray-700 font-semibold">Gender:</label>
+                    <select id="gender" name="gender" class="mt-1 block w-full p-2 border border-gray-300 rounded">
+                        <option value="">Select Gender</option>
+                        <option value="Male" <?php echo (isset($user['gender']) && $user['gender'] == 'Male') ? 'selected' : ''; ?>>Male</option>
+                        <option value="Female" <?php echo (isset($user['gender']) && $user['gender'] == 'Female') ? 'selected' : ''; ?>>Female</option>
+                        <option value="Other" <?php echo (isset($user['gender']) && $user['gender'] == 'Other') ? 'selected' : ''; ?>>Other</option>
+                    </select>
+                </div>
+                <div class="mb-4">
                     <label for="weight" class="block text-gray-700 font-semibold">Weight (kg):</label>
                     <input type="text" id="weight" name="weight"
                         value="<?php echo htmlspecialchars($user['weight'] ?? ''); ?>"
@@ -64,10 +82,17 @@ $user = $stmt->get_result()->fetch_assoc();
                 </div>
 
                 <div class="mb-4">
-                    <label for="other_health_details" class="block text-gray-700 font-semibold">Other Health
-                        Details:</label>
-                    <textarea id="other_health_details" name="other_health_details"
-                        class="mt-1 block w-full p-2 border border-gray-300 rounded"><?php echo htmlspecialchars($user['other_health_details'] ?? ''); ?></textarea>
+                    <label for="activity_level" class="block text-gray-700 font-semibold">Activity Level:</label>
+                    <select id="activity_level" name="activity_level"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded">
+                        <option value="">Select Activity Level</option>
+                        <option value="Sedentary" <?php echo (isset($user['activity_level']) && $user['activity_level'] == 'Sedentary') ? 'selected' : ''; ?>>Sedentary</option>
+                        <option value="Lightly Active" <?php echo (isset($user['activity_level']) && $user['activity_level'] == 'Lightly Active') ? 'selected' : ''; ?>>Lightly Active</option>
+                        <option value="Moderately Active" <?php echo (isset($user['activity_level']) && $user['activity_level'] == 'Moderately Active') ? 'selected' : ''; ?>>Moderately Active
+                        </option>
+                        <option value="Very Active" <?php echo (isset($user['activity_level']) && $user['activity_level'] == 'Very Active') ? 'selected' : ''; ?>>Very Active</option>
+                        <option value="Super Active" <?php echo (isset($user['activity_level']) && $user['activity_level'] == 'Super Active') ? 'selected' : ''; ?>>Super Active</option>
+                    </select>
                 </div>
 
                 <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Save
