@@ -23,8 +23,14 @@
     username VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
+    weight DECIMAL(5, 2) DEFAULT NULL, 
+    height DECIMAL(4, 1) DEFAULT NULL, 
+    age INT DEFAULT NULL,              
+    gender ENUM('Male', 'Female', 'Other') DEFAULT NULL, 
+    activity_level ENUM('Sedentary', 'Lightly Active', 'Moderately Active', 'Very Active', 'Super Active') DEFAULT NULL, 
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
    );
+
    ```
 
 ## Adding Gemini API to environment variables
