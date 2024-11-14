@@ -12,7 +12,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
         <ul class="flex space-x-10 mx-auto">
             <li><a href="index.php" class="text-gray-700 hover:text-green-600">Home</a></li>
-            <li><a href="popular.php" class="text-gray-700 hover:text-green-600">Popular Plans</a></li>
+            <li><a href="planner.php" class="text-gray-700 hover:text-green-600">Create a Plan</a></li>
             <li><a href="display.php" class="text-gray-700 hover:text-green-600">Find a Recipe</a></li>
             <li><a href="about.php" class="text-gray-700 hover:text-green-600">About</a></li>
         </ul>

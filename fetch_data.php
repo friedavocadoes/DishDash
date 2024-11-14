@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
 
         // The alternative method includes replacing the below line with your api key in quotes.
-        // $apiKey = getenv("GEM_API_KEY");
+        $apiKey = getenv("GEM_API_KEY");
 
         $apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
 

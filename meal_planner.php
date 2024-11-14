@@ -97,6 +97,7 @@ Strictly follow this format and the output should be the json alone
 
 ";
 // Call Gemini API
+$apiKey = getenv("GEM_API_KEY");
 
 $apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
 

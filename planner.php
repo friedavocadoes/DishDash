@@ -26,9 +26,12 @@ $username = $_SESSION['username'];
     <div class="container mx-auto px-4 py-8 flex">
         <!-- Sidebar -->
         <aside class="w-1/4 bg-white shadow-md rounded p-6">
-            <h2 class="text-2xl font-semibold text-green-600 mb-4">User Info</h2>
-            <p class="text-gray-700">Logged in as:</p>
-            <p class="font-semibold"><?php echo htmlspecialchars($username); ?></p>
+            <h2 class="text-2xl font-semibold text-green-600 mb-4">Create a Custom Meal</h2>
+            <p class="text-gray-700"><br>Use Gemini to make yourself a full day's meal plan.<br><br>Make sure to fill
+                all
+                the
+                details in the following form and click generate once you are done.</p>
+
         </aside>
 
         <!-- Main Content -->
