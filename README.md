@@ -49,7 +49,7 @@
    ```
 3. Restart your computer for the environment variable changes to be reflected.
 > [!TIP]
-> You can alternatively just edit the `$apiKey` variable in the `fetch_data.php` and `meal_planner` files.
+> You can alternatively just edit the `$apiKey` variable in the `fetch_data.php` and `meal_planner.php` files.
    
 ## Opening the Website
 #### Once the Database and Table is created, open http://localhost/DishDash/index.php on a browser.
