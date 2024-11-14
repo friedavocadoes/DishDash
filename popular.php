@@ -11,7 +11,7 @@
 <body class="bg-gray-50 text-gray-800">
 
 
-    <?php include 'navbar.php'; ?>
+    <?php include './components/navbar.php'; ?>
 
 
     <section class="container mx-auto px-40 py-20">
@@ -56,7 +56,7 @@
     </section>
 
 
-    <?php include 'footer.php'; ?>
+    <?php include './components/footer.php'; ?>
 
 </body>
 

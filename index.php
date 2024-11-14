@@ -9,7 +9,7 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-    <?php include 'navbar.php'; ?>
+    <?php include './components/navbar.php'; ?>
 
     <!-- Hero Section -->
     <section class="container mx-auto px-4 py-16 text-center">
@@ -102,7 +102,7 @@
         </div>
     </section>
 
-    <?php include 'footer.php'; ?>
+    <?php include './components/footer.php'; ?>
 </body>
 
 </html>

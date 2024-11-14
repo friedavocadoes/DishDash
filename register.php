@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'config.php';
+require './configs/config.php';
 
 if (isset($_SESSION['username'])) {
     header("Location: dashboard.php");
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-    <?php include 'navbar.php'; ?>
+    <?php include './components/navbar.php'; ?>
 
     <!-- Register Form -->
     <section class="container mx-auto px-4 py-16">
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </section>
 
-    <?php include 'footer.php'; ?>
+    <?php include './components/footer.php'; ?>
 
 </body>
 

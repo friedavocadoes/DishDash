@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'config.php';
+include './configs/config.php';
 
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
@@ -28,7 +28,7 @@ $user = $stmt->get_result()->fetch_assoc();
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-    <?php include 'navbar.php'; ?>
+    <?php include './components/navbar.php'; ?>
 
 
     <h1 class="text-4xl font-bold text-green-600 text-center mt-10">Dashboard</h1>
@@ -101,7 +101,7 @@ $user = $stmt->get_result()->fetch_assoc();
         </section>
     </div>
 
-    <?php include 'footer.php'; ?>
+    <?php include './components/footer.php'; ?>
 
 </body>
 

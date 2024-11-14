@@ -24,7 +24,7 @@ if (isset($_GET['response'])) {
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-    <?php include 'navbar.php'; ?>
+    <?php include './components/navbar.php'; ?>
 
     <div class="container flex flex-col mx-auto px-4 py-16">
         <h1 class="text-4xl font-bold text-green-600 text-center mb-8">Find a Recipe</h1>
@@ -49,7 +49,7 @@ if (isset($_GET['response'])) {
         <div class="mx-auto mt-5"><?php echo $output ?></div>
     </div>
 
-    <?php include 'footer.php'; ?>
+    <?php include './components/footer.php'; ?>
 
     <script>
         const button = document.getElementById("button");
