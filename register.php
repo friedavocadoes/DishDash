@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Check if user already exists
     $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? OR email = ?");
     $stmt->bind_param("ss", $username, $email);
     $stmt->execute();
@@ -23,14 +22,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($result->num_rows > 0) {
         $err = "Username or email already exists.";
     } else {
-        // Hash the password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $username, $email, $hashed_password);
 
         if ($stmt->execute()) {
             $_SESSION['username'] = $username;
-            header("Location: index.php"); // Redirect to homepage
+            header("Location: index.php");
         } else {
             $err = "Registration failed.";
         }
@@ -51,7 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="bg-gray-50 text-gray-800">
     <?php include './components/navbar.php'; ?>
 
-    <!-- Register Form -->
     <section class="container mx-auto px-4 py-16">
         <h1 class="text-4xl font-bold text-green-600 text-center mb-8">Register</h1>
         <form method="POST" class="flex flex-col max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">

@@ -191,7 +191,6 @@ curl_close($ch);
                 </div>
             <?php endforeach; ?>
 
-            <!-- Snacks -->
             <?php if (!empty($mealPlan['OptionalSnacks'])): ?>
                 <h3 class="text-xl font-semibold mt-6 mb-2">Optional Snacks</h3>
                 <ul class="list-disc pl-6">

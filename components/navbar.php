@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 ?>
 
-<nav class="bg-white shadow">
+<nav class="bg-white shadow z-50">
     <div class="container mx-auto px-16 py-6 flex justify-between items-center">
 
         <a href="index.php" class="text-2xl font-semibold text-green-600">DishDash</a>
@@ -27,7 +27,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
                     <!-- Dropdown content -->
                     <div
-                        class="absolute right-0 hidden group-hover:block bg-white border border-gray-200 rounded shadow-md">
+                        class="z-50 absolute right-0 hidden group-hover:block bg-white border border-gray-200 rounded shadow-md">
                         <a href="dashboard.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Dashboard</a>
                         <a href="logout.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
 
