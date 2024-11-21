@@ -4,116 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DishDash - Your Meal, Your Way</title>
+    <title>DishDash - Premium Meal Planning</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom Material Shadows */
-        .shadow-material {
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
-        .shadow-material-hover:hover {
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15), 0px 6px 12px rgba(0, 0, 0, 0.15);
+        .gradient-animation {
+            background: linear-gradient(90deg, #007BFF, #6C63FF, #FF6F91);
+            background-size: 300% 300%;
+            animation: gradientFlow 8s ease infinite;
         }
 
-        /* Hover Effects */
-        .hover-scale:hover {
-            transform: scale(1.05);
-            transition: transform 0.2s ease;
+        .glass {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .button-gradient {
+            background: linear-gradient(90deg, #FF7A18, #AF002D, #319197);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button-gradient:hover {
+            background: linear-gradient(270deg, #FF7A18, #AF002D, #319197);
+            transform: translateY(-3px);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Navbar -->
+    <!-- <header class="flex justify-between items-center px-8 py-4">
+        <div class="text-2xl font-bold tracking-wide text-blue-400">DishDash</div>
+        <nav class="space-x-6">
+            <a href="#features" class="hover:text-blue-300 transition">Features</a>
+            <a href="#articles" class="hover:text-blue-300 transition">Trending</a>
+            <a href="#contact" class="hover:text-blue-300 transition">Contact</a>
+        </nav>
+        <a href="register.php"
+            class="px-6 py-2 rounded-full bg-blue-500 hover:bg-blue-600 transition text-white font-semibold">Get
+            Started</a>
+    </header> -->
+
     <?php include './components/navbar.php'; ?>
 
+
     <!-- Hero Section -->
-    <section class="relative bg-white shadow-material">
-        <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-8 py-16">
-            <div class="max-w-lg mb-12 lg:mb-0">
-                <h1 class="text-5xl font-bold text-gray-800 leading-tight mb-6">
-                    Welcome to <span class="text-blue-600">DishDash</span>
-                </h1>
-                <p class="text-lg text-gray-600 mb-8">
-                    Simplify your life with smarter meal planning. Designed for your health, budget, and taste.
-                </p>
-                <a href="display.php"
-                    class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-material hover:bg-blue-700 transition">
-                    Get Started
-                </a>
-            </div>
-            <img src="./assets/modern-food.svg" alt="Modern Food Illustration" class="max-w-md lg:max-w-lg">
+    <section class="relative gradient-animation text-center py-20">
+        <div class="container mx-auto">
+            <h1 class="text-6xl font-extrabold mb-6 leading-tight">
+                Revolutionize <span class="text-yellow-400">Meal Planning</span>
+            </h1>
+            <p class="text-lg text-gray-200 mb-8 max-w-lg mx-auto">
+                The perfect tool to simplify your life and make eating healthy a breeze. Join thousands of users
+                improving their meals with DishDash.
+            </p>
+            <a href="display.php"
+                class="px-8 py-4 rounded-full button-gradient text-white font-bold text-lg inline-block">
+                Discover Now
+            </a>
         </div>
+        <img src="./assets/hero-meal.svg" alt="Meal Planning Hero Image" class="absolute bottom-0 right-0 max-w-md">
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto text-center px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8">Why Choose DishDash?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 bg-white rounded-lg shadow-material hover-scale">
+    <section id="features" class="py-16 bg-gray-800 text-center">
+        <div class="container mx-auto px-8">
+            <h2 class="text-4xl font-bold mb-10 text-white">Features You’ll Love</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-lg glass shadow-lg">
                     <img src="./assets/icon-1.svg" alt="Personalized Plans" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Tailored Meal Plans</h3>
-                    <p class="text-gray-600">Customized meal plans designed for your unique dietary needs and goals.</p>
+                    <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Personalized Plans</h3>
+                    <p class="text-gray-300">Plans designed just for you, tailored to your health goals and taste.</p>
                 </div>
-                <div class="p-8 bg-white rounded-lg shadow-material hover-scale">
+                <div class="p-8 rounded-lg glass shadow-lg">
                     <img src="./assets/icon-2.svg" alt="Time Efficiency" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Save Time & Money</h3>
-                    <p class="text-gray-600">Plan ahead, minimize waste, and stick to your grocery budget.</p>
+                    <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Save Time & Money</h3>
+                    <p class="text-gray-300">Effortlessly plan meals to fit your schedule and your budget.</p>
                 </div>
-                <div class="p-8 bg-white rounded-lg shadow-material hover-scale">
+                <div class="p-8 rounded-lg glass shadow-lg">
                     <img src="./assets/icon-3.svg" alt="Smart Recipes" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Easy-to-Follow Recipes</h3>
-                    <p class="text-gray-600">Simple, step-by-step recipes that anyone can follow and enjoy.</p>
+                    <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Effortless Recipes</h3>
+                    <p class="text-gray-300">Enjoy step-by-step guides to make cooking enjoyable and easy.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Dynamic Articles Section -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800">Trending Reads</h2>
-                <p class="text-lg text-gray-600">Stay informed and inspired with our latest articles.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-material p-6 hover-scale">
-                    <img src="./assets/article-1.jpg" alt="Article 1" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Top 10 Meal Prep Tips</h3>
-                    <p class="text-gray-600 mb-4">Discover efficient ways to prep your meals for the week.</p>
-                    <a href="#" class="text-blue-600 font-semibold hover:underline">Read More</a>
+    <!-- Trending Articles -->
+    <section id="articles" class="py-16 bg-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-white mb-8">Trending Articles</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                    <img src="./assets/article-1.jpg" alt="Article" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-blue-400">10 Meal Prep Tips You’ll Love</h3>
+                    <p class="text-gray-400">Master the art of meal prep with these expert tricks.</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-material p-6 hover-scale">
-                    <img src="./assets/article-2.jpg" alt="Article 2" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">The Rise of Plant-Based Eating</h3>
-                    <p class="text-gray-600 mb-4">Explore the benefits and recipes of a plant-based diet.</p>
-                    <a href="#" class="text-blue-600 font-semibold hover:underline">Read More</a>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                    <img src="./assets/article-2.jpg" alt="Article" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-blue-400">Plant-Based Diets Demystified</h3>
+                    <p class="text-gray-400">Explore the benefits of a plant-based lifestyle.</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-material p-6 hover-scale">
-                    <img src="./assets/article-3.jpg" alt="Article 3" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Foods That Boost Focus</h3>
-                    <p class="text-gray-600 mb-4">Eat smarter with these brain-boosting superfoods.</p>
-                    <a href="#" class="text-blue-600 font-semibold hover:underline">Read More</a>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all">
+                    <img src="./assets/article-3.jpg" alt="Article" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-blue-400">Brain-Boosting Superfoods</h3>
+                    <p class="text-gray-400">Discover the top foods for sharper focus and memory.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="py-16 bg-blue-600 text-white text-center">
-        <div class="container mx-auto px-8">
-            <h2 class="text-4xl font-bold mb-6">Take Control of Your Meals</h2>
-            <p class="text-lg font-light mb-8">Join thousands of users planning better meals with DishDash.</p>
-            <a href="register.php"
-                class="bg-white text-blue-600 px-6 py-3 rounded-lg shadow-material hover:bg-gray-50 font-semibold transition">
-                Sign Up Today
-            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <?php include './components/footer.php'; ?>
+    <footer id="contact" class="py-8 bg-gray-800">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-400">© 2024 DishDash. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
