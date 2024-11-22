@@ -50,7 +50,7 @@
     <?php include './components/navbar.php'; ?>
 
     <!-- Hero Section -->
-    <section class="relative gradient-animation text-center py-20 mt-16">
+    <section class="relative gradient-animation text-center py-20 mt-16 pt-40 pb-30">
         <div class="container mx-auto">
             <h1 class="text-6xl font-extrabold mb-6 leading-tight">
                 Revolutionize <span class="text-yellow-400">Meal Planning</span>
@@ -68,7 +68,7 @@
 
     <!-- Features Section -->
     <section id="features" class="py-16 bg-gray-900 text-center">
-        <div class="container mx-auto px-8">
+        <div class="container mx-auto px-16">
             <h2 class="text-4xl font-bold mb-10 text-white">Features You'll Love</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="p-8 rounded-lg glass shadow-lg">

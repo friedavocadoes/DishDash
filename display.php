@@ -23,11 +23,11 @@ if (isset($_GET['response'])) {
 
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gradient-to-r from-blue-100 via-indigo-100 to-white text-gray-800">
     <?php include './components/navbar.php'; ?>
 
-    <div class="container flex flex-col mx-auto px-4 py-16">
-        <h1 class="text-4xl font-bold text-green-600 text-center mb-8">Find a Recipe</h1>
+    <div class="container flex flex-col mx-auto px-4 py-16 mt-20">
+        <h1 class="text-4xl font-bold text-indigo-800 text-center mb-8">Find a Recipe</h1>
 
 
         <div class="text-center">
@@ -43,7 +43,7 @@ if (isset($_GET['response'])) {
 
                 <br><br>
                 <input onclick=clear name="submit" type="submit"
-                    class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 cursor-pointer">
+                    class="px-4 py-2 bg-indigo-800 text-white rounded hover:bg-indigo-700 cursor-pointer">
             </form>
         </div>
         <div class="mx-auto mt-5"><?php echo $output ?></div>
