@@ -15,14 +15,6 @@ $meals = $_POST['meals'];
 $cuisine = $_POST['cuisine'];
 $mealPlan = "";
 // Prepare prompt for Gemini API
-$message = "Generate a meal plan based on the following details:
-- Dietary Preference: $diet
-- Allergies: $allergies
-- Caloric Intake: $calories kcal
-- Number of Meals: $meals
-- Preferred Cuisine: $cuisine";
-
-
 $message = "Generate a structured JSON meal plan based on the following details:
 {
     \"DietaryPreference\": $diet,
@@ -96,11 +88,9 @@ heres a sample json:
 Strictly follow this format and the output should be the json alone
 
 ";
-// Gemini API key (the following variable shud be replaced)
+// Gemini API key (the following variable should be replaced)
 $apiKey = getenv("GEM_API_KEY");
-
 $apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
-
 
 $data = json_encode([
     'contents' => [
@@ -153,64 +143,68 @@ curl_close($ch);
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-900">
+
     <?php include './components/navbar.php'; ?>
 
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-4xl font-bold text-green-600 mb-8 text-center">Your Personalized Meal Plan</h1>
+        <h1 class="text-4xl font-bold text-green-700 mb-8 text-center">Your Personalized Meal Plan</h1>
 
+        <div class="bg-white p-8 shadow-lg rounded-lg max-w-4xl mx-auto space-y-6">
 
-
-        <!-- <?php echo $mealPlan ?> -->
-
-
-        <div class="bg-white p-6 shadow-md rounded">
             <!-- Meal Plan Header -->
-            <h2 class="text-2xl font-bold text-green-600 mb-4">Meal Plan Overview</h2>
-            <p><strong>Total Calories:</strong> <?php echo htmlspecialchars($mealPlan['TotalCalories']); ?> kcal</p>
-            <p><strong>Cuisine:</strong> <?php echo htmlspecialchars($mealPlan['Cuisine']); ?></p>
-            <p><strong>Allergies:</strong> <?php echo htmlspecialchars($mealPlan['Allergies']); ?></p>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Meal Plan Overview</h2>
+            <div class="space-y-2 text-lg">
+                <p><strong>Total Calories:</strong> <?php echo htmlspecialchars($mealPlan['TotalCalories']); ?> kcal</p>
+                <p><strong>Cuisine:</strong> <?php echo htmlspecialchars($mealPlan['Cuisine']); ?></p>
+                <p><strong>Allergies:</strong> <?php echo htmlspecialchars($mealPlan['Allergies']); ?></p>
+            </div>
 
             <!-- Meals -->
-            <h3 class="text-xl font-semibold mt-6 mb-2">Meals</h3>
-            <?php foreach ($mealPlan['Meals'] as $meal): ?>
-                <div class="mb-4">
-                    <h4 class="font-bold text-gray-800"><?php echo htmlspecialchars($meal['MealType']); ?>
-                        (<?php echo htmlspecialchars($meal['TotalMealCalories']); ?> kcal)</h4>
-                    <ul class="list-disc pl-6">
-                        <?php foreach ($meal['Items'] as $item): ?>
-                            <li>
-                                <strong><?php echo htmlspecialchars($item['DishName']); ?></strong>
-                                - <?php echo htmlspecialchars($item['Calories']); ?> kcal
-                                <?php if (isset($item['Notes'])): ?>
-                                    <span class="italic">(<?php echo htmlspecialchars($item['Notes']); ?>)</span>
-                                <?php endif; ?>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
-            <?php endforeach; ?>
+            <div class="space-y-8">
+                <h3 class="text-xl font-semibold text-gray-700">Meals</h3>
+                <?php foreach ($mealPlan['Meals'] as $meal): ?>
+                    <div class="p-6 bg-gray-50 shadow-md rounded-lg">
+                        <h4 class="text-lg font-bold text-gray-800"><?php echo htmlspecialchars($meal['MealType']); ?>
+                            (<?php echo htmlspecialchars($meal['TotalMealCalories']); ?> kcal)</h4>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <?php foreach ($meal['Items'] as $item): ?>
+                                <li class="text-gray-600">
+                                    <strong><?php echo htmlspecialchars($item['DishName']); ?></strong> -
+                                    <?php echo htmlspecialchars($item['Calories']); ?> kcal
+                                    <?php if (isset($item['Notes'])): ?>
+                                        <span class="italic text-gray-500">(<?php echo htmlspecialchars($item['Notes']); ?>)</span>
+                                    <?php endif; ?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endforeach; ?>
 
-            <?php if (!empty($mealPlan['OptionalSnacks'])): ?>
-                <h3 class="text-xl font-semibold mt-6 mb-2">Optional Snacks</h3>
-                <ul class="list-disc pl-6">
-                    <?php foreach ($mealPlan['OptionalSnacks'] as $snack): ?>
-                        <li>
-                            <strong><?php echo htmlspecialchars($snack['DishName']); ?></strong>
-                            - <?php echo htmlspecialchars($snack['Calories']); ?> kcal
-                            <?php if (isset($snack['Notes'])): ?>
-                                <span class="italic">(<?php echo htmlspecialchars($snack['Notes']); ?>)</span>
-                            <?php endif; ?>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
+                <?php if (!empty($mealPlan['OptionalSnacks'])): ?>
+                    <div class="p-6 bg-gray-50 shadow-md rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-700">Optional Snacks</h3>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <?php foreach ($mealPlan['OptionalSnacks'] as $snack): ?>
+                                <li class="text-gray-600">
+                                    <strong><?php echo htmlspecialchars($snack['DishName']); ?></strong> -
+                                    <?php echo htmlspecialchars($snack['Calories']); ?> kcal
+                                    <?php if (isset($snack['Notes'])): ?>
+                                        <span class="italic text-gray-500">(<?php echo htmlspecialchars($snack['Notes']); ?>)</span>
+                                    <?php endif; ?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+            </div>
+
         </div>
-
 
     </div>
 
     <?php include './components/footer.php'; ?>
+
 </body>
 
 </html>

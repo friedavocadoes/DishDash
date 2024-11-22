@@ -4,10 +4,10 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 ?>
 
-<nav class="bg-gray-900 shadow-md fixed top-0 left-0 w-full z-50">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<nav class="bg-gray-900 shadow-md fixed top-0 left-0 w-full z-50 mb-16">
+    <div class="container mx-auto px-20 py-4 flex justify-between items-center">
         <!-- Logo -->
-        <a href="index.php" class="text-3xl font-bold text-gradient hover:opacity-90 transition">
+        <a href="index.php" class="text-3xl font-bold text-gradient text-white hover:opacity-50 transition">
             DishDash
         </a>
 
@@ -31,11 +31,11 @@ if (session_status() === PHP_SESSION_NONE) {
                     <div class="hidden group-hover:block absolute right-0 mt-2 w-40 bg-gray-800 rounded-lg shadow-lg"
                         id="user-dropdown">
                         <a href="dashboard.php"
-                            class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-yellow-400 transition">
+                            class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-yellow-400 rounded-lg transition">
                             Dashboard
                         </a>
                         <a href="logout.php"
-                            class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-yellow-400 transition">
+                            class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-yellow-400 rounded-lg transition">
                             Logout
                         </a>
                     </div>

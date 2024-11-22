@@ -47,24 +47,10 @@
 </head>
 
 <body class="bg-gray-900 text-white font-sans">
-    <!-- Navbar -->
-    <!-- <header class="flex justify-between items-center px-8 py-4">
-        <div class="text-2xl font-bold tracking-wide text-blue-400">DishDash</div>
-        <nav class="space-x-6">
-            <a href="#features" class="hover:text-blue-300 transition">Features</a>
-            <a href="#articles" class="hover:text-blue-300 transition">Trending</a>
-            <a href="#contact" class="hover:text-blue-300 transition">Contact</a>
-        </nav>
-        <a href="register.php"
-            class="px-6 py-2 rounded-full bg-blue-500 hover:bg-blue-600 transition text-white font-semibold">Get
-            Started</a>
-    </header> -->
-
     <?php include './components/navbar.php'; ?>
 
-
     <!-- Hero Section -->
-    <section class="relative gradient-animation text-center py-20">
+    <section class="relative gradient-animation text-center py-20 mt-16">
         <div class="container mx-auto">
             <h1 class="text-6xl font-extrabold mb-6 leading-tight">
                 Revolutionize <span class="text-yellow-400">Meal Planning</span>
@@ -78,26 +64,26 @@
                 Discover Now
             </a>
         </div>
-        <img src="./assets/hero-meal.svg" alt="Meal Planning Hero Image" class="absolute bottom-0 right-0 max-w-md">
+        <img src="./assets/1.jpg" alt="Meal Planning Hero Image" class="absolute bottom-0 right-0 max-w-md">
     </section>
 
     <!-- Features Section -->
     <section id="features" class="py-16 bg-gray-800 text-center">
         <div class="container mx-auto px-8">
-            <h2 class="text-4xl font-bold mb-10 text-white">Features You’ll Love</h2>
+            <h2 class="text-4xl font-bold mb-10 text-white">Features You'll Love</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="p-8 rounded-lg glass shadow-lg">
-                    <img src="./assets/icon-1.svg" alt="Personalized Plans" class="w-16 h-16 mx-auto mb-4">
+                    <img src="./assets/personal.png" alt="Personalized Plans" class="h-20 mx-auto mb-4">
                     <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Personalized Plans</h3>
                     <p class="text-gray-300">Plans designed just for you, tailored to your health goals and taste.</p>
                 </div>
                 <div class="p-8 rounded-lg glass shadow-lg">
-                    <img src="./assets/icon-2.svg" alt="Time Efficiency" class="w-16 h-16 mx-auto mb-4">
+                    <img src="./assets/time.png" alt="Time Efficiency" class="h-20 mx-auto mb-4">
                     <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Save Time & Money</h3>
                     <p class="text-gray-300">Effortlessly plan meals to fit your schedule and your budget.</p>
                 </div>
                 <div class="p-8 rounded-lg glass shadow-lg">
-                    <img src="./assets/icon-3.svg" alt="Smart Recipes" class="w-16 h-16 mx-auto mb-4">
+                    <img src="./assets/smart.png" alt="Smart Recipes" class="h-20 mx-auto mb-4">
                     <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Effortless Recipes</h3>
                     <p class="text-gray-300">Enjoy step-by-step guides to make cooking enjoyable and easy.</p>
                 </div>
@@ -130,11 +116,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="py-8 bg-gray-800">
-        <div class="container mx-auto text-center">
-            <p class="text-gray-400">© 2024 DishDash. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <?php include "./components/footer.php" ?>
 </body>
 
 </html>
