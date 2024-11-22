@@ -26,7 +26,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <li class="relative group">
                     <!-- Username with Dropdown -->
                     <span class="text-gray-300 cursor-pointer hover:text-yellow-400 transition" id="user-menu-trigger">
-                        <?php echo htmlspecialchars($_SESSION['username']); ?>
+                        <?php echo htmlspecialchars($_SESSION['username']); ?> ⌄
                     </span>
                     <div class="hidden group-hover:block absolute right-0 mt-2 w-40 bg-gray-800 rounded-lg shadow-lg"
                         id="user-dropdown">
