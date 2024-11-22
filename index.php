@@ -60,15 +60,14 @@
                 improving their meals with DishDash.
             </p>
             <a href="display.php"
-                class="px-8 py-4 rounded-full button-gradient text-white font-bold text-lg inline-block">
+                class="px-8 py-4 rounded-full bg-indigo-800 hover:opacity-80 transition text-white font-bold text-lg inline-block">
                 Discover Now
             </a>
         </div>
-        <!-- <img src="./assets/1.jpg" alt="Meal Planning Hero Image" class="absolute bottom-0 right-0 max-w-md"> -->
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 bg-gray-800 text-center">
+    <section id="features" class="py-16 bg-gray-900 text-center">
         <div class="container mx-auto px-8">
             <h2 class="text-4xl font-bold mb-10 text-white">Features You'll Love</h2>
             <div class="grid md:grid-cols-3 gap-8">
@@ -92,7 +91,7 @@
     </section>
 
     <!-- Trending Articles -->
-    <section id="articles" class="py-16 bg-gray-900">
+    <!-- <section id="articles" class="py-16 bg-gray-900">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold text-white mb-8">Trending Articles</h2>
             <div class="grid md:grid-cols-3 gap-8">
@@ -113,7 +112,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <?php include "./components/footer.php" ?>

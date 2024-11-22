@@ -30,9 +30,9 @@ $username = $_SESSION['username'];
     <!-- Navbar -->
     <?php include './components/navbar.php'; ?>
 
-    <div class="container mx-auto px-20 py-8 flex mt-16">
+    <div class="container mx-auto px-20 py-8 flex mt-24">
         <!-- Sidebar -->
-        <aside class="w-1/4 bg-indigo-100 backdrop-blur-md bg-opacity-65 shadow-lg rounded-sm p-10 pt-16 mr-8">
+        <aside class="w-1/4 bg-indigo-100 backdrop-blur-lg bg-opacity-45 shadow-lg rounded-sm p-10 pt-16 mr-8">
             <h2 class="text-2xl font-semibold text-indigo-600 mb-4">Create a Custom Meal</h2>
             <p class="text-gray-700 mb-6">
                 Use Gemini to create a personalized meal plan for the day! Just fill in the details and let us do the
@@ -43,7 +43,7 @@ $username = $_SESSION['username'];
         </aside>
 
         <!-- Main Content -->
-        <section class="w-3/4 bg-gray-100 backdrop-blur-md bg-opacity-95 shadow-lg rounded-sm p-16">
+        <section class="w-3/4 bg-gray-200 backdrop-blur-md bg-opacity-65 shadow-lg rounded-sm p-16">
             <h1 class="text-3xl font-bold text-indigo-600 mb-6 text-center">Plan Your Meals</h1>
 
             <!-- Meal Planning Form -->
@@ -94,7 +94,7 @@ $username = $_SESSION['username'];
                 <!-- Submit Button -->
                 <div class="flex justify-center">
                     <button type="submit"
-                        class="bg-gradient-to-r from-green-400 to-blue-500 text-white text-lg font-semibold py-3 px-6 rounded-lg hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-600 transition duration-300">
+                        class="bg-indigo-800 text-white text-lg font-semibold py-3 px-6 rounded-lg hover:opacity-80 transition duration-300">
                         Generate Meal Plan
                     </button>
                 </div>
