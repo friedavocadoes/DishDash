@@ -64,7 +64,7 @@
                 Discover Now
             </a>
         </div>
-        <img src="./assets/1.jpg" alt="Meal Planning Hero Image" class="absolute bottom-0 right-0 max-w-md">
+        <!-- <img src="./assets/1.jpg" alt="Meal Planning Hero Image" class="absolute bottom-0 right-0 max-w-md"> -->
     </section>
 
     <!-- Features Section -->
